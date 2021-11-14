@@ -1,0 +1,23 @@
+.header{
+	color: #f00;
+	font: 700 50px/50px 'Roboto';
+	display: grid;
+	grid-template-columns: repeat(4 , 1fr);
+	grid-gap: 40px;
+	&-title{
+		&:not(:last-child){
+			margin-bottom: 20px;
+		}
+	}
+	&-span{
+		margin-bottom: 0;
+	}
+}
+
+@media (max-width: 600px) {
+	.header{
+		display: flex;
+		flex-direction: column-reverse;
+		gap: 30;
+	}
+}

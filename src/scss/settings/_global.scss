@@ -1,0 +1,145 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+	display: block;
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+body {
+	letter-spacing: 0.43px;
+	background-color: #ffffff;
+	font: 400 20px / 24px var(--font);
+}
+
+.btn-reset {
+	border: none;
+	outline: none;
+	background-color: transparent;
+	cursor: pointer;
+	color: inherit;
+	font: inherit;
+	padding: 0;
+}
+
+.wrapper {
+	max-width: 480px;
+	margin: 0 auto;
+	background-color: #fff;
+	overflow: hidden;
+}
+
+.container {
+	max-width: 100%;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+.hide {
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	position: absolute;
+	transition: opacity 1.3s;
+}
+
+.text-under {
+	text-decoration: underline;
+}
+
+.text-accent {
+	font-weight: 800;
+}
+
+.link-box {
+	background-color: #576588;
+	padding: 30px 0;
+}
+
+.link-to-form {
+	max-width: 310px;
+	color: $white;
+	padding: 25px 0;
+	text-align: center;
+	font: 700 30px/30px var(--font);
+	background: linear-gradient(180deg, #FF5C00 0%, #CD5600 100%);
+	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+	border-radius: 5px;
+	margin: 0 auto;
+	z-index: 1;
+	transition: all .3s ease-in-out;
+	opacity: .8;
+
+
+	&:hover {
+		opacity: 1;
+	}
+}
+
+.section {
+	padding: 52px 0;
+
+	&--dark {
+		background-color: #576588;
+
+		.title {
+			color: $white;
+		}
+		.link-box{
+			background-color: $white;
+		}
+	}
+
+	&--white {
+		background-color: #fff;
+
+		.title {
+			color: $black;
+		}
+
+	}
+
+}
+
+.title {
+	font: 900 30px/36px var(--font);
+	text-transform: uppercase;
+	max-width: 420px;
+	margin: 0 auto;
+	text-align: center;
+	padding: 0 5px;
+}
+.subtitle{
+	width: 95%;
+	background-image: url('../images/dest/subtitle-bg.png');
+	@extend %bg-contain;
+	background-size: 100% 100%;
+	padding: 20px 5px;
+	font:500 23px/28px var(--font);
+	color: $white;
+	text-align: center;
+	margin:0 auto 20px;
+
+}
+
+@media (max-width:321px) {
+	.title{
+		font-size: 25px;
+		line-height: 30px;
+		word-break: break-word;
+	}
+}
